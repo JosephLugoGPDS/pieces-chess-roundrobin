@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ChessColors {
+class PhotoBotColors {
   static final purple = Color(0xFF5117ac);
   static final green = Color(0xFF20d0c4);
   static final dark = Color(0xFF03091e);
@@ -15,7 +15,7 @@ class ChessColors {
 final _borderLight =OutlineInputBorder(
       borderRadius: BorderRadius.circular(10),
       borderSide: BorderSide(
-        color: ChessColors.veryLightGrey,
+        color: PhotoBotColors.veryLightGrey,
         width: 2,
       )
     );
@@ -23,88 +23,88 @@ final _borderLight =OutlineInputBorder(
 final _borderDark =OutlineInputBorder(
       borderRadius: BorderRadius.circular(10),
       borderSide: BorderSide(
-        color: ChessColors.grey,
+        color: PhotoBotColors.grey,
         width: 2,
       )
     );
 
-final chessGradients = [
-  ChessColors.purple,
-  ChessColors.green,
+final photoGradients = [
+  PhotoBotColors.purple,
+  PhotoBotColors.green,
 ];
 
 final lightTheme = ThemeData(
-  cardColor: ChessColors.white,
-  secondaryHeaderColor: ChessColors.purple,
-  bottomAppBarColor: ChessColors.veryLightGrey,
+  cardColor: PhotoBotColors.white,
+  secondaryHeaderColor: PhotoBotColors.purple,
+  bottomAppBarColor: PhotoBotColors.veryLightGrey,
   appBarTheme: AppBarTheme(
-    color: ChessColors.white,
+    color: PhotoBotColors.white,
     textTheme: GoogleFonts.poppinsTextTheme().copyWith(
       headline6: TextStyle(
         fontSize: 20,
-        color: ChessColors.purple,
+        color: PhotoBotColors.purple,
         fontWeight: FontWeight.bold
       )
     )
   ),
-  scaffoldBackgroundColor: ChessColors.white,
-  canvasColor: ChessColors.white,
+  scaffoldBackgroundColor: PhotoBotColors.white,
+  canvasColor: PhotoBotColors.white,
   textTheme: GoogleFonts.poppinsTextTheme().apply(
-    bodyColor: ChessColors.purple,
-    displayColor: ChessColors.purple,
+    bodyColor: PhotoBotColors.purple,
+    displayColor: PhotoBotColors.purple,
   ),
   inputDecorationTheme: InputDecorationTheme(
     labelStyle: TextStyle(
-      color: ChessColors.purple,
+      color: PhotoBotColors.purple,
     ),
     border: _borderLight,
     enabledBorder: _borderLight,
     hintStyle: GoogleFonts.poppins(
-      color: ChessColors.lightGrey,
+      color: PhotoBotColors.lightGrey,
       fontSize: 14
     ),
     
   ),
   iconTheme: IconThemeData(
-    color: ChessColors.purple
+    color: PhotoBotColors.purple
   )
 );
 
 final darkTheme = ThemeData(
-  cardColor: ChessColors.grey,
-  secondaryHeaderColor: ChessColors.white,
+  cardColor: PhotoBotColors.grey,
+  secondaryHeaderColor: PhotoBotColors.white,
   bottomAppBarColor: Colors.transparent,
   appBarTheme: AppBarTheme(
-    color: ChessColors.purple,
+    color: PhotoBotColors.purple,
     textTheme: GoogleFonts.poppinsTextTheme().copyWith(
       headline6: TextStyle(
         fontSize: 20,
-        color: ChessColors.white,
+        color: PhotoBotColors.white,
         fontWeight: FontWeight.bold
       )
     )
   ),
-  scaffoldBackgroundColor: ChessColors.dark,
-  canvasColor: ChessColors.grey,
+  scaffoldBackgroundColor: PhotoBotColors.dark,
+  canvasColor: PhotoBotColors.grey,
   textTheme: GoogleFonts.poppinsTextTheme().apply(
-    bodyColor: ChessColors.green,
-    displayColor: ChessColors.green,
+    bodyColor: PhotoBotColors.green,
+    displayColor: PhotoBotColors.green,
   ),
   inputDecorationTheme: InputDecorationTheme(
     labelStyle: TextStyle(
-      color: ChessColors.white
+      color: PhotoBotColors.white
     ),
     border: _borderDark,
     enabledBorder: _borderDark,
-    fillColor: ChessColors.grey,
+    fillColor: PhotoBotColors.grey,
     filled: true,
     hintStyle: GoogleFonts.poppins(
-      color: ChessColors.white,
+      color: PhotoBotColors.white,
       fontSize: 14
     ),
     
   ),
   iconTheme: IconThemeData(
-    color: ChessColors.white
+    color: PhotoBotColors.white
   )
 );
