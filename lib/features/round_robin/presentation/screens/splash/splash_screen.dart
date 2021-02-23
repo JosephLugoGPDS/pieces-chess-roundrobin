@@ -37,15 +37,21 @@ class _SplashScreenState extends State<SplashScreen>
     });
   }
 
-  _loadNextScreen() async {
-    await Future.delayed(const Duration(seconds: 3),
-        () => Navigator.pushNamed(context, "/welcome"));
-  }
-
   void dispose() {
     animationController.dispose();
     super.dispose();
   }
+
+  _loadNextScreen() async {
+    // final user = Provider.of<AuthUser>(context);
+    await Future.delayed(const Duration(seconds: 3),
+        // () => Navigator.pushNamed(context, "/welcome"));
+        () {
+        Navigator.pushNamed(context, "/wrapper");
+    });
+  }
+
+
 
   @override
   Widget build(BuildContext context) {

@@ -1,12 +1,65 @@
 import 'package:flutter/material.dart';
+import 'package:round_robin_team4/features/auth/auth_service.dart';
 
 import 'package:round_robin_team4/features/main_theming_and_state_management/presentation/theme.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final AuthUserProvider auth = AuthUserProvider();
     final theme = Theme.of(context);
     final size = MediaQuery.of(context).size;
+
+    //!Cerrar sesion
+    cerrarSesion(BuildContext context) {
+      return showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text("¿Desea cerrar sesión?"),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20))),
+            actions: <Widget>[
+              ButtonTheme(
+                height: 40,
+                child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: PhotoBotColors.purple)),
+                  color: PhotoBotColors.purple,
+                  child: Text(
+                    'Si',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                  onPressed: () async {
+                    //ToDo: Arreglar
+                    await auth.logout();
+                    Navigator.of(context).pop();
+                    Navigator.of(context).pushNamed('/wrapper');
+                  },
+                ),
+              ),
+              ButtonTheme(
+                height: 40,
+                child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: PhotoBotColors.purple)),
+                  color: PhotoBotColors.purple,
+                  child: Text(
+                    'No',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ),
+            ],
+          );
+        },
+      );
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -16,6 +69,14 @@ class ProfileScreen extends StatelessWidget {
         ),
         // centerTitle: true,
         leading: Icon(Icons.group),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.logout),
+            onPressed: () {
+              cerrarSesion(context);
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -73,7 +134,7 @@ class BodyProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal:20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -83,7 +144,7 @@ class BodyProfile extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Expanded(child: SizedBox(),flex: 2),
+            const Expanded(child: SizedBox(), flex: 2),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
@@ -92,7 +153,7 @@ class BodyProfile extends StatelessWidget {
                     color: PhotoBotColors.green, fontWeight: FontWeight.bold),
               ),
             ),
-            const Expanded(child: SizedBox(),flex: 1),
+            const Expanded(child: SizedBox(), flex: 1),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: SingleChildScrollView(
@@ -138,7 +199,7 @@ class BodyProfile extends StatelessWidget {
                 ),
               ),
             ),
-            const Expanded(child: SizedBox(),flex: 2),
+            const Expanded(child: SizedBox(), flex: 2),
           ],
         ),
       ),
