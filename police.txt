@@ -1,0 +1,31 @@
+
+Política de Privacidad de la aplicación Round Robin
+
+Última actualización: 10 de Abril de 2024
+
+Esta Política de Privacidad describe cómo tu información personal es recogida, utilizada y compartida cuando utilizas la aplicación Round Robin (la "App").
+
+INFORMACIÓN QUE RECOGEMOS
+
+Cuando utilizas la App, recogemos la siguiente información:
+
+Información de la cuenta: Cuando te registras en la App, recogemos tu dirección de correo electrónico. Utilizamos esta información para proporcionarte acceso a la App y para comunicarnos contigo.
+CÓMO UTILIZAMOS TU INFORMACIÓN
+
+Utilizamos la información que recogemos de ti para:
+
+Proporcionarte acceso a la App.
+Comunicarnos contigo.
+Mejorar y optimizar la App.
+COMPARTIR TU INFORMACIÓN PERSONAL
+
+Compartimos tu información personal con terceros para ayudarnos a utilizar tu información personal, como se describe anteriormente. Por ejemplo, utilizamos Firebase para autenticarte en la App. Puedes leer más sobre cómo Firebase utiliza tu información personal aquí: https://firebase.google.com/support/privacy?hl=es-419.
+
+TUS DERECHOS
+
+Si resides en ciertos territorios, incluyendo la UE, tienes una serie de derechos en relación con tu información personal. Si deseas ejercer estos derechos, por favor ponte en contacto con nosotros a través de la información de contacto a continuación.
+
+CONTACTO
+
+Para obtener más información sobre nuestras prácticas de privacidad, si tienes preguntas, o si deseas hacer una queja, por favor ponte en contacto con nosotros por correo electrónico a josephfronted1@gmail.com
+
